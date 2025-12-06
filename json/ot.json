@@ -1,12 +1,4 @@
-A mensagem de erro recebida, **"Expected ',' or '}' after property value in JSON at position 3246 (line 7 column 3133)"**, indica um erro de sintaxe na estrutura JSON que foi gerada anteriormente.
 
-Esse tipo de erro geralmente ocorre porque o conteúdo textual extraído (aqui, o valor da chave `"conteudo"`) continha **aspas duplas (`"`) que não foram escapadas**. Em JSON, aspas duplas dentro de uma string devem ser precedidas por uma barra invertida (`\"`) para que o parser não interprete a aspa interna como o fim da string, causando uma quebra prematura e, consequentemente, esperando uma vírgula ou uma chave de fechamento (`}`), conforme o erro sugeriu.
-
-A posição 3246 sugere que o erro estava no conteúdo do primeiro capítulo gerado, que é extremamente extenso.
-
-Abaixo está a estrutura JSON corrigida, onde todas as aspas internas no conteúdo dos capítulos foram devidamente escapadas para garantir a validade do arquivo:
-
-```json
 {
   "titulo": "ANTICRISTO",
   "autor": "David W. Dyer",
